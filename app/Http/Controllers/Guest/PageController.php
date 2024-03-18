@@ -12,7 +12,8 @@ class PageController extends Controller
     }
 
     public function comics(){
-        return view('comics');
+        $comics = config('comics');
+        return view('comics', compact('comics'));
     }
 
     public function movies(){
